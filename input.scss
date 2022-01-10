@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+$bg-color: hsl(225, 100%, 94%);
+$btn-color: hsl(245, 75%, 52%) ; 
+$faded: hsl(225, 100%, 98%) ; 
+$gray-text: hsl(224, 23%, 55%);
+$dark-text: hsl(223, 47%, 23%); 
+
+
+
+*{
+    margin: 0; 
+    box-sizing: border-box;
+}
+
+body{
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    background-color: $bg-color; 
+    height: 100vh; 
+    width: 100vw; 
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+#bg{
+    position: absolute; 
+    z-index: -1; 
+    top: 0; 
+    left: 0; 
+    width: 100vw; 
+    height: 50vh; 
+
+    @media (max-width: 675px) {
+        display: none; 
+    }
+}
+
+.container{
+    background-color: white;
+    height: 500px; 
+    width: 320px; 
+    border-radius: 10px; 
+    box-shadow: 1px 7px 10px rgba($color: #000000, $alpha: .3); 
+}
+
+#illustration{
+    width: 320px; 
+    border-top-left-radius: 10px; 
+    border-top-right-radius: 10px; 
+}
+
+.small-container{
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 15px; 
+
+    .header{
+        font-weight: 900; 
+        font-size: 1.2em;
+        margin-top: 25px; 
+        color: $dark-text; 
+    }
+    .desc{
+        text-align: center; 
+        font-size: 14px; 
+        font-weight: 500; 
+        color: $gray-text; 
+        width: 230px; 
+    }
+
+    .price-box{
+        width: 250px; 
+        background-color: $faded; 
+        display: flex; 
+        padding: 15px 5px; 
+        border-radius: 10px; 
+        justify-content: space-around; 
+        align-items: center; 
+       
+        .circle-icon{
+            width: 50px; 
+            height: 50px; 
+            background-color: $bg-color; 
+            border-radius: 50%; 
+        }
+
+        .plan-box{
+            .plan{
+                font-size: 14px; 
+                font-weight: 900; 
+                color: $dark-text; 
+            }
+            .price{
+                font-size: 14px; 
+                font-weight: 500; 
+                color: $gray-text; 
+            }
+        }
+        .change {
+            margin-left: 20px; 
+            a {
+            color: $btn-color; 
+            font-size: 14px; 
+            font-weight: 700;
+
+            &:hover{
+                opacity: 0.6; 
+                cursor: pointer; 
+            }
+            
+            &:visited{
+                color: $btn-color; 
+            }
+        }
+        }
+    }
+
+    .payment-btn{
+     
+        button {
+        border: 0; 
+        background-color: $btn-color; 
+        color: #fff; 
+        width: 250px; 
+        height: 40px; 
+        border-radius: 10px; 
+        font-size: 14px; 
+        font-weight: 700; 
+        box-shadow: 1px 7px 20px rgba($color: #000000, $alpha: .3);
+
+        &:hover{
+            opacity: 0.6; 
+            cursor: pointer; 
+        }
+        }
+    
+        
+    }
+    
+    .cancel{
+        color: $gray-text; 
+        font-weight: 800;
+        font-size: 14px;
+        margin-top: 6px; 
+        &:hover{
+            color: $dark-text; 
+            cursor: pointer; 
+        } 
+    }
+}
+
+
+
+
